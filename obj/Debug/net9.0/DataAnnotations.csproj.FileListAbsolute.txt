@@ -1,0 +1,14 @@
+/Users/apple/Documents/cursos/balta/FundamentoEntityFramework/Treinamento/DataAnnotations/bin/Debug/net9.0/DataAnnotations
+/Users/apple/Documents/cursos/balta/FundamentoEntityFramework/Treinamento/DataAnnotations/bin/Debug/net9.0/DataAnnotations.deps.json
+/Users/apple/Documents/cursos/balta/FundamentoEntityFramework/Treinamento/DataAnnotations/bin/Debug/net9.0/DataAnnotations.runtimeconfig.json
+/Users/apple/Documents/cursos/balta/FundamentoEntityFramework/Treinamento/DataAnnotations/bin/Debug/net9.0/DataAnnotations.dll
+/Users/apple/Documents/cursos/balta/FundamentoEntityFramework/Treinamento/DataAnnotations/bin/Debug/net9.0/DataAnnotations.pdb
+/Users/apple/Documents/cursos/balta/FundamentoEntityFramework/Treinamento/DataAnnotations/obj/Debug/net9.0/DataAnnotations.GeneratedMSBuildEditorConfig.editorconfig
+/Users/apple/Documents/cursos/balta/FundamentoEntityFramework/Treinamento/DataAnnotations/obj/Debug/net9.0/DataAnnotations.AssemblyInfoInputs.cache
+/Users/apple/Documents/cursos/balta/FundamentoEntityFramework/Treinamento/DataAnnotations/obj/Debug/net9.0/DataAnnotations.AssemblyInfo.cs
+/Users/apple/Documents/cursos/balta/FundamentoEntityFramework/Treinamento/DataAnnotations/obj/Debug/net9.0/DataAnnotations.csproj.CoreCompileInputs.cache
+/Users/apple/Documents/cursos/balta/FundamentoEntityFramework/Treinamento/DataAnnotations/obj/Debug/net9.0/DataAnnotations.dll
+/Users/apple/Documents/cursos/balta/FundamentoEntityFramework/Treinamento/DataAnnotations/obj/Debug/net9.0/refint/DataAnnotations.dll
+/Users/apple/Documents/cursos/balta/FundamentoEntityFramework/Treinamento/DataAnnotations/obj/Debug/net9.0/DataAnnotations.pdb
+/Users/apple/Documents/cursos/balta/FundamentoEntityFramework/Treinamento/DataAnnotations/obj/Debug/net9.0/DataAnnotations.genruntimeconfig.cache
+/Users/apple/Documents/cursos/balta/FundamentoEntityFramework/Treinamento/DataAnnotations/obj/Debug/net9.0/ref/DataAnnotations.dll
