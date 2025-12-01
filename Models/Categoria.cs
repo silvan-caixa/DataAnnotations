@@ -10,7 +10,7 @@ public class Categoria
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
-    [Column("NOME", TypeName = "VARCHAR")]
+    [Column("NAME", TypeName = "VARCHAR")]
     [MaxLength(60)]
     [MinLength(3)]
     [Required]

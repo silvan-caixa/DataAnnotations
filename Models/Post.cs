@@ -19,7 +19,10 @@ public class Post
     public string? Sumario { get; set; }
     [Column("DataCriacao", TypeName = "DATETIME")]
     [Required]
-    public DateTime DataCriacao { get; set; }
+
+    public DateTime DataCriacao { get; set; } = DateTime.Now;
+
+    public DateTime DataAtualizacao { get; set; } = DateTime.UtcNow;
 
     [ForeignKey("Categoria")]
     [Required]

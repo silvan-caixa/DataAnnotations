@@ -64,3 +64,10 @@
 /Users/apple/Documents/cursos/balta/FundamentoEntityFramework/Treinamento/DataAnnotations/bin/Debug/net9.0/runtimes/win/lib/net9.0/System.Security.Cryptography.Pkcs.dll
 /Users/apple/Documents/cursos/balta/FundamentoEntityFramework/Treinamento/DataAnnotations/obj/Debug/net9.0/DataAnnotations.csproj.AssemblyReference.cache
 /Users/apple/Documents/cursos/balta/FundamentoEntityFramework/Treinamento/DataAnnotations/obj/Debug/net9.0/DataAnno.5B934113.Up2Date
+/Users/apple/Documents/cursos/balta/FundamentoEntityFramework/Treinamento/DataAnnotations/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.dll
+/Users/apple/Documents/cursos/balta/FundamentoEntityFramework/Treinamento/DataAnnotations/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/apple/Documents/cursos/balta/FundamentoEntityFramework/Treinamento/DataAnnotations/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/apple/Documents/cursos/balta/FundamentoEntityFramework/Treinamento/DataAnnotations/bin/Debug/net9.0/Microsoft.EntityFrameworkCore.SqlServer.dll
+/Users/apple/Documents/cursos/balta/FundamentoEntityFramework/Treinamento/DataAnnotations/bin/Debug/net9.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/apple/Documents/cursos/balta/FundamentoEntityFramework/Treinamento/DataAnnotations/bin/Debug/net9.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/apple/Documents/cursos/balta/FundamentoEntityFramework/Treinamento/DataAnnotations/bin/Debug/net9.0/Microsoft.Extensions.Logging.dll
