@@ -14,6 +14,7 @@ class Program
             Console.WriteLine("1 - Criar Categoria");
             Console.WriteLine("2 - Criar Usuário");
             Console.WriteLine("3 - Criar Post");
+            Console.WriteLine("4 - Relatorio");
             Console.WriteLine("0 - Sair");
             Console.Write("Escolha: ");
 
@@ -24,6 +25,8 @@ class Program
                 case "1": CriarCategoria(); break;
                 case "2": CriarUsuario(); break;
                 case "3": CriarPost(); break;
+                case "4": Relatorio(); break;
+
                 case "0": return;
                 default:
                     Console.WriteLine("Opção inválida");
@@ -102,5 +105,59 @@ class Program
 
         Console.WriteLine("Post criado com sucesso!");
         Console.ReadKey();
+    }
+    static void Relatorio()
+    {
+        while (true)
+        {
+            Console.Clear();
+            Console.WriteLine("===== MENU RELATORIO =====");
+            Console.WriteLine("1 - Listar Categoria");
+            Console.WriteLine("2 - Listar Usuário");
+            Console.WriteLine("3 - Listar Post");
+            Console.WriteLine("0 - Sair");
+            Console.Write("Escolha: ");
+
+            var opcao = Console.ReadLine();
+
+            switch (opcao)
+            {
+                case "1": ListarCategoria(); break;
+                case "2": ListarUsuario(); break;
+                //case "3": ListarPost(); break;
+                case "0": return;
+                default:
+                    Console.WriteLine("Opção inválida");
+                    Console.ReadKey();
+                    break;
+            }
+
+            static void ListarCategoria()
+            {
+                using var db = new DataContext();
+                var categorias = db.Categorias.ToList();
+                System.Console.WriteLine("CATEGORIA | DESCRICAO");
+                foreach (var categoria in categorias)
+                {
+                    System.Console.WriteLine($"{categoria.Nome} | {categoria.Descricao}");
+                }
+                Console.ReadKey();
+
+            }
+            static void ListarUsuario()
+            {
+                using var db = new DataContext();
+                var usuarios = db.Usuarios.ToList();
+                System.Console.WriteLine("USUARIO | CPF");
+
+                foreach (var usuario in usuarios)
+                {
+                    System.Console.WriteLine($"{usuario.Nome} | {usuario.Cpf}");
+                }
+                Console.ReadKey();
+
+            }
+            
+        }
     }
 }
