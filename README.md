@@ -3,6 +3,8 @@
 ## Criar Usuario ja com categoria e post ok
 ## Relatorio: list(categoria, usuario, post) Agrupamento(Usuario_Post, Categoria_Post)
 ## Relarorio: Lista os posts de usuario
+## Relarorio: Lista os posts de categoria
+
 
 
 ## LISTA POSTS COM INCLUDE
@@ -27,4 +29,26 @@ static void ListarPost()
                 Console.ReadKey();
 
             }
+    ## Lista Os posts por Categoria 
+    ```csharp
+     public static void PostsCategoria()
+    {
+        System.Console.Write("IRFORME O ID DA CATEGORIA: ");
+        var op = int.Parse(Console.ReadLine() ?? "");
+
+        var db = new DataContext();
+        var postsCategoria = db.Posts
+        .AsNoTracking()
+        .Where(x => x.CategoriaId == op)
+        .Include(x => x.Categoria)
+        .ToList();
+
+        foreach (var item in postsCategoria)
+        {
+            System.Console.WriteLine($"Post: {item.Titulo} | Descricao: {item.Categoria?.Descricao}");
+
+        }
+        Console.ReadKey();
+    }
+    
     ## FIM

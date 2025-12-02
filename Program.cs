@@ -43,7 +43,7 @@ class Program
         }
     }
 
-    private static void PostsCategoria()
+    public static void PostsCategoria()
     {
         System.Console.Write("IRFORME O ID DA CATEGORIA: ");
         var op = int.Parse(Console.ReadLine() ?? "");
@@ -57,13 +57,13 @@ class Program
 
         foreach (var item in postsCategoria)
         {
-            System.Console.WriteLine($"Post: {item.Titulo} | Post: {item.Categoria?.Descricao}");
+            System.Console.WriteLine($"Post: {item.Titulo} | Descricao: {item.Categoria?.Descricao}");
 
         }
         Console.ReadKey();
     }
 
-    static void PostsUsuario()
+    public static void PostsUsuario()
     {
         System.Console.WriteLine("IRFOME O ID DO USARIO:");
         var op = int.Parse(Console.ReadLine() ?? "");
