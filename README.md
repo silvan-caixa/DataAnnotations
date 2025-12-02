@@ -4,6 +4,7 @@
 ## Relatorio: list(categoria, usuario, post) Agrupamento(Usuario_Post, Categoria_Post)
 ## Relarorio: Lista os posts de usuario
 ## Relarorio: Lista os posts de categoria
+## Criar usuario com Categoria e Post
 
 
 
@@ -50,5 +51,24 @@ static void ListarPost()
         }
         Console.ReadKey();
     }
+
+    ## RESUMO GERAL
+    <p>
+        Instalações 
+        => Microsoft.EntityFrameworkCore.SqlServer
+        => Microsoft.Data.SqlClient
+        => Microsoft.EntityFrameworkCore
+
+        Models
+            Class Categoria
+            Class Post
+            Class Usuario
+
+        Data
+            DataContext
+                conexao com banco
+                dbset das classes
+
+        Main
     
-    ## FIM
+    <\p>

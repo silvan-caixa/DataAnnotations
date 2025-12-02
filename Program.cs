@@ -115,8 +115,26 @@ class Program
         Console.Write("CPF: ");
         string cpf = Console.ReadLine() ?? "";
 
-        var usuario = new Usuario { Nome = nome, Cpf = cpf };
-        db.Usuarios.Add(usuario);
+        Console.Write("Categoria: ");
+        string categoria = Console.ReadLine() ?? "";
+
+        Console.Write("Descricao da Categoria: ");
+        string categoriaDescricao = Console.ReadLine() ?? "";
+
+        Console.Write("Post Titulo: ");
+        string postTitulo = Console.ReadLine() ?? "";
+
+        Console.Write("Post Sumario: ");
+        string postSumario = Console.ReadLine() ?? "";
+
+
+
+        var user = new Usuario { Nome = nome, Cpf = cpf };
+        var categ = new Categoria { Nome = categoria, Descricao = categoriaDescricao };
+        var post = new Post { Titulo = postTitulo, Sumario = postSumario, Categoria = categ, Usuario = user };
+
+
+        db.Posts.Add(post);
         db.SaveChanges();
 
         Console.WriteLine("Usuário criado com sucesso!");
