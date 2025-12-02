@@ -1,5 +1,7 @@
 ﻿using DataAnnotations.Data;
 using DataAnnotations.Models;
+using Microsoft.EntityFrameworkCore;
+
 
 namespace DataAnnotations;
 
@@ -15,6 +17,9 @@ class Program
             Console.WriteLine("2 - Criar Usuário");
             Console.WriteLine("3 - Criar Post");
             Console.WriteLine("4 - Relatorio");
+            Console.WriteLine("5 - Pots de Usuario");
+            Console.WriteLine("6 - Pots por categoria");
+
             Console.WriteLine("0 - Sair");
             Console.Write("Escolha: ");
 
@@ -26,6 +31,8 @@ class Program
                 case "2": CriarUsuario(); break;
                 case "3": CriarPost(); break;
                 case "4": Relatorio(); break;
+                case "5": PostsUsuario(); break;
+                case "6": PostsCategoria(); break;
 
                 case "0": return;
                 default:
@@ -34,6 +41,46 @@ class Program
                     break;
             }
         }
+    }
+
+    private static void PostsCategoria()
+    {
+        System.Console.Write("IRFORME O ID DA CATEGORIA: ");
+        var op = int.Parse(Console.ReadLine() ?? "");
+
+        var db = new DataContext();
+        var postsCategoria = db.Posts
+        .AsNoTracking()
+        .Where(x => x.CategoriaId == op)
+        .Include(x => x.Categoria)
+        .ToList();
+
+        foreach (var item in postsCategoria)
+        {
+            System.Console.WriteLine($"Post: {item.Titulo} | Post: {item.Categoria?.Descricao}");
+
+        }
+        Console.ReadKey();
+    }
+
+    static void PostsUsuario()
+    {
+        System.Console.WriteLine("IRFOME O ID DO USARIO:");
+        var op = int.Parse(Console.ReadLine() ?? "");
+
+        using var db = new DataContext();
+        var usuarioPosts = db.Posts
+        .AsNoTracking()
+        .Where(x => x.AuthorId == op)
+        .Include(x => x.Usuario)
+        .ToList();
+
+        foreach (var item in usuarioPosts)
+        {
+            System.Console.WriteLine($"usario: {item.Usuario?.Nome} | Post: {item.Titulo}");
+        }
+        Console.ReadKey();
+
     }
 
     static void CriarCategoria()
@@ -49,7 +96,7 @@ class Program
         {
             Nome = nome,
             Descricao = descricao
-            
+
         };
         db.Categorias.Add(categoria);
         db.SaveChanges();
@@ -124,7 +171,7 @@ class Program
             {
                 case "1": ListarCategoria(); break;
                 case "2": ListarUsuario(); break;
-                //case "3": ListarPost(); break;
+                case "3": ListarPost(); break;
                 case "0": return;
                 default:
                     Console.WriteLine("Opção inválida");
@@ -157,7 +204,27 @@ class Program
                 Console.ReadKey();
 
             }
-            
+            static void ListarPost()
+            {
+                using var db = new DataContext();
+                var posts = db.Posts
+                    .AsNoTracking()
+                    .Include(x => x.Usuario)
+                    .Include(x => x.Categoria)
+                    .Include(x => x.AuthorId)
+                    .ToList
+                    ();
+
+                System.Console.WriteLine("TITULO        |      SUMARIO      |      DATA CRIACAO     |      DATA ATUALIZACAO     |       USUARIO      |       TÍTULO CATEGORIA");
+
+                foreach (var post in posts)
+                {
+                    System.Console.WriteLine($"{post?.Titulo}    |    {post?.Sumario}     |   {post?.DataCriacao}  | {post?.DataAtualizacao}    |   {post.Usuario.Nome}  |   {post.Categoria.Nome}");
+                }
+                Console.ReadKey();
+
+            }
+
         }
     }
 }

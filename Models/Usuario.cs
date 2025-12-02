@@ -7,6 +7,7 @@ namespace DataAnnotations.Models
     [Table("USUARIO", Schema = "dbo")]
     public class Usuario
     {
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("ID")]
@@ -21,5 +22,7 @@ namespace DataAnnotations.Models
         [MinLength(3)]
         [Column("CPF", TypeName = "VARCHAR")]
         public string? Cpf { get; set; }
+
+        public List<Post?> Posts { get; set; } = new();
     }
 }

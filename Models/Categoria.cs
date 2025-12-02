@@ -20,4 +20,6 @@ public class Categoria
     [MinLength(3)]
     [Required]
     public string? Descricao { get; set; }
+
+    public List<Post?> Posts { get; set; } = new();
 }
