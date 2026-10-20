@@ -1,4 +1,4 @@
-
+Estudos e projetos relacionados a análise e desenvolvimento de sistemas, modelagem de dados, bancos de dados, engenharia de software e gestão de projetos de tecnologia.
 
 
 
